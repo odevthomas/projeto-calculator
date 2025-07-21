@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #46e06c;
+  --danger: #ff2213;
+  --accent: #07fc28;
+  --text-dark: #2d2d2d;
+  --text-light: #7a7a7a;
+  --bg: #f7f7f7;
+  --white: #ffffff;
+  --shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  background-color: var(--bg);
+  background-image: url("../images/bg1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-dark);
+}
+
+.calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+
+.calc-container {
+  width: 320px;
+  border-radius: 28px;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.output {
+  padding: 1rem;
+  border-bottom: 1px solid #ececec;
+  background: linear-gradient(to bottom, #fff, #f9f9f9);
+}
+
+.operation {
+  font-size: 1.7rem;
+  color: var(--text-light);
+  height: 60px;
+  position: relative;
+}
+
+.operation .value {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  height: 100px;
+  position: relative;
+}
+
+.result .value {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input {
+  padding: 1.2rem;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+  border-radius: 0 0 28px 28px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.row button {
+  flex: 1;
+  height: 55px;
+  margin: 0 6px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  background-color: #f3f3f3;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.row button:hover {
+  transform: scale(1.05);
+  background-color: #e6e6e6;
+}
+
+.row button:active {
+  transform: scale(0.97);
+}
+
+.row #calculate {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  flex: 2;
+}
+
+.row #delete {
+  background-color: var(--danger);
+  color: white;
+}
+
+#division,
+#multiplication,
+#subtraction,
+#addition,
+#clear,
+#percent {
+  background-color: var(--accent);
+  color: white;
+  font-weight: 600;
+}
